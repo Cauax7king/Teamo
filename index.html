@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Meu Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            color: #ff1493;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .heart {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            position: relative;
+            margin: 20px auto;
+            transform: rotate(-45deg);
+            animation: heartbeat 1s infinite alternate;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -15px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 15px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1) rotate(-45deg); }
+            100% { transform: scale(1.2) rotate(-45deg); }
+        }
+
+        button {
+            background-color: #ff1493;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ff69b4;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #mensagem {
+            font-size: 18px;
+            font-weight: bold;
+            color: #d40078;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Para a pessoa mais especial do mundo ❤️</h1>
+        <p>Meu amor, eu te amo muito! Estou aqui para cuidar de você sempre, viu?</p>
+        <div class="heart"></div>
+        <button onclick="mostrarMensagem()">Clique aqui</button>
+        <p id="mensagem" class="hidden">
+            É incrível como, mesmo depois de tão pouco tempo, você já significa tanto para mim.  
+            Desde a primeira vez que te vi, senti que algo especial estava acontecendo.  
+            Eu posso não ter te visto muitas vezes, mas cada conversa, cada mensagem, cada detalhe seu já mora dentro do meu coração.  
+            Eu só quero que você saiba que estou aqui, que você é especial demais para mim, e que eu mal posso esperar para te ver de novo. ❤️  
+        </p>
+    </div>
+
+    <script>
+        function mostrarMensagem() {
+            document.getElementById("mensagem").classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
